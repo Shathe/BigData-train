@@ -4,10 +4,10 @@ This is a learning project.
 
 ## Technologies to learn
 
-* [Scala (Programming language)](http://www.scala-lang.org/)
-* [Spark (Apache technology)](http://spark.apache.org/)
-* [Zeppeling (Apache technology)](https://zeppelin.incubator.apache.org/)
-* [Cassandra (Apache technology)](http://cassandra.apache.org/)
+* [Scala (Programming language)](http://www.scala-lang.org/) Learn the basis
+* [Spark (Apache technology)](http://spark.apache.org/) The more I learn, the better
+* [Zeppeling (Apache technology)](https://zeppelin.incubator.apache.org/) For data visualitation
+* [Cassandra (Apache technology)](http://cassandra.apache.org/) Learn the basis
  
  
  
@@ -16,7 +16,7 @@ This is a learning project.
 
 * [Java](https://www.java.com/es/download/)
 * [Spring](https://spring.io/)
-
+* [Bootstrap magic](http://scripteden.com/builder/bootstrap/)
 
 ## Motivation
 
