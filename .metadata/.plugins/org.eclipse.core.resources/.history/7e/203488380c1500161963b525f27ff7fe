@@ -1,0 +1,31 @@
+/**
+ *  Author: Inigo Alonso Ruiz
+ */
+
+package java8features;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+/**
+ * 
+ * @author inigo
+ *
+ *         Example Class used to try out the new lambda expresions of Java 8
+ */
+public class LambdaExpressions {
+
+	public static void main(String[] args) {
+
+		// listing the elements of an array
+		Arrays.asList("element one", "element two", "element three").forEach((String e) -> {
+			System.out.println(e);
+		});
+		
+		// listing the elements of an array
+		ArrayList<String> array = new ArrayList<>();
+		array.forEach((String e) -> {
+			System.out.println(e);
+		});
+	}
+}

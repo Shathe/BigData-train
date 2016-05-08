@@ -1,0 +1,17 @@
+/**
+ *  Author: Inigo Alonso Ruiz
+ */
+
+package java8features;
+
+/**
+ * 
+ * @author inigo
+ *
+ *         Example Class used to try out the new lambda expresions of Java 8
+ */
+public class LambdaExpressions {
+
+
+	
+}

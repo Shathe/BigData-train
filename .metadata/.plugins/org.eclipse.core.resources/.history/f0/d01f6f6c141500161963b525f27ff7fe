@@ -1,0 +1,74 @@
+/**
+ *  Author: Inigo Alonso Ruiz
+ */
+
+package java8features;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+/**
+ * 
+ * @author inigo
+ *
+ *         Example Class used to try out the new lambda expresions of Java 8
+ */
+public class LambdaExpressions {
+
+	public static void main(String[] args) {
+
+		// listing the elements of an array
+		Arrays.asList("element one", "element two", "element three").forEach((String e) -> {
+			System.out.println(e);
+		});
+
+		// listing the elements of an array
+		ArrayList<String> array = new ArrayList<>();
+		array.add("Lambda");
+		array.add("Expressions");
+
+		System.out.print("You can do a lot of cool things with ");
+		array.forEach((String e) -> {
+			System.out.println(e + " ");
+		});
+
+		System.out.println();
+		// Lists
+		ArrayList<Player> players = new ArrayList<>();
+		ArrayList<User> users = new ArrayList<>();
+		
+		// Data
+		players.add(new Player("David", 200));
+		players.add(new Player("Alex", 150));
+		players.add(new Player("Christian", 350));
+		players.add(new Player("Lucian", 210));
+		players.add(new Player("Player not a user", 280));
+
+		users.add(new User("David", 21));
+		users.add(new User("Alex", 17));
+		users.add(new User("Christian", 35));
+		users.add(new User("Lucian", 23));
+		users.add(new User("User not a player", 25));
+		
+		// Filtering users who are over 30 and whose name starts with a 'C'
+	    List<User> olderUsers = users.stream().filter(u -> u.getAge() > 30 && u.getName().startsWith("C")).collect(Collectors.toList());
+		System.out.println("Old users ( > 30 ):");
+	    olderUsers.forEach( e -> {
+			System.out.println(e);
+		});
+		System.out.println();
+
+		
+		Set<String> acceptablePlayerNames = 
+			    players.stream()
+			         .map(Player::getName)
+			         .collect(Collectors.toSet());
+
+		 List<User> UsersWhoPlays= users.stream()
+			              .filter(c -> acceptablePlayerNames.contains(c.getName()))
+			              .collect(Collectors.toList());
+	}
+}
