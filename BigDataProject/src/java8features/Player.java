@@ -26,10 +26,12 @@ public class Player  {
 		this.value = value;
 	}
 	
+	public Player() {
+	}
 	/* Getters and Setters */
 
 	public String getName() {
-		return name;
+		return ( name != null ) ? name : "";
 	}
 	public void setName(String name) {
 		this.name = name;
@@ -43,7 +45,7 @@ public class Player  {
 	
 	@Override
 	public String toString(){
-		return "Name: "+name+", Value:"+value;
+		return "Name: "+getName()+", Value:"+value;
 	}
 	 
 }

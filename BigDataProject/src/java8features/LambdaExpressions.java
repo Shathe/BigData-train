@@ -5,6 +5,10 @@
 package java8features;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+import java.util.OptionalInt;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -50,11 +54,11 @@ public class LambdaExpressions {
 		players.add(new Player("Lucian", 210));
 		players.add(new Player("Player not a user", 280));
 
-		// Data: User:{name,age}
+		// Data: User: {name,age}
 		users.add(new User("David", 21));
 		users.add(new User("Alex", 17));
 		users.add(new User("Christian", 35));
-		users.add(new User("Lucian", 23));
+		users.add(new User("Lucian", 21));
 		users.add(new User("User not a player", 25));
 
 		// Filtering users who are over 30 and whose name starts with a 'C'
@@ -77,6 +81,36 @@ public class LambdaExpressions {
 
 		System.out.println("Users who are also players:");
 		printArrayList(UsersWhoPlays);
+		
+		// Gets the maximun value of a player. If this value is less than 200, gets 200
+		final int min = 200;
+		OptionalInt maxValue= players.stream().filter( player -> player.getValue() > min )
+				.mapToInt( Player::getValue ).max();
+				
+		System.out.println( "Max value: " + maxValue.orElseGet( () -> min ) );
+		
+		// Gets the adition of the ages of every user
+		int totalAges = users.stream().parallel().map(user -> user.getAge()) // or map( User::getAge )
+				.reduce( 0, Integer::sum );
+				
+		System.out.println( "Total ages: " + totalAges );
+		System.out.println( "Average age: " + (double)totalAges/users.size() );
+		System.out.println();
+		
+		// Users grouped by the age
+		Map< Integer, List< User > > map = users.stream().collect( Collectors.groupingBy( User::getAge ) );
+		System.out.println( map );
+		System.out.println();
+
+		// Gets the percentage of the age of every user over the group
+		Collection< String > result = users.stream()                                        
+				.mapToInt( User::getAge )                     	 // Get every age
+				.asLongStream()                                  // Gets its stream
+				.mapToDouble( points -> points * 100 / totalAges ) // Gets its percentage
+				.mapToObj( percentage -> percentage + "%" )      // gets the string with the '%'
+				.collect( Collectors.toList() );                 // Gets the list
+		System.out.println( result );
+
 
 	}
 

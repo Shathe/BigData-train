@@ -27,11 +27,14 @@ public class User {
 		this.name = name;
 		this.age = age;
 	}
+	
+	public User() {
+	}
 
 	/* Getters and Setters */
 
 	public String getName() {
-		return name;
+		return ( name != null ) ? name : "";
 	}
 
 	public void setName(String name) {
@@ -48,7 +51,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "Name: " + name + ", Age:" + age;
+		return "Name: " + getName() + ", Age:" + age;
 	}
 
 }
