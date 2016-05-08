@@ -7,7 +7,7 @@ This is a learning project.
 * [Spark (Apache technology)](http://spark.apache.org/) The more I learn, the better, all its libraries
 * [Zeppeling (Apache technology)](https://zeppelin.incubator.apache.org/) For data visualitation
 * [Cassandra (Apache technology)](http://cassandra.apache.org/) Learn the basis
-* [Java 8 (new features)](https://dzone.com/articles/5-features-java-8-will-change) or [these](https://www.javacodegeeks.com/2014/05/java-8-features-tutorial.html)
+* [Java 8 (new features)](https://www.javacodegeeks.com/2014/05/java-8-features-tutorial.html)
 * [deeplearning4j](http://deeplearning4j.org/) Giving it a shot
 
  
