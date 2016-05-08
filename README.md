@@ -29,3 +29,9 @@ I also glanced over some machine learning libraries.
 After mulling it over, I finally chose these technologies due to they complement themselfs, they are from the same Project (Apache) and above all they fit better for what I was looking for (to learn).
 
 
+## Already Done
+
+* Java 8 new features [by here](https://github.com/Shathe/BigData-train/blob/master/BigDataProject/src/java8features/LambdaExpressions.java)
+
+
+
