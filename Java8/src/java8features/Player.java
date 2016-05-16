@@ -13,7 +13,7 @@ package java8features;
 public class Player  {
 	
 	/* Each Player has a name and a value */
-	private String name;
+	private Integer dni;
 	private Integer value;
 	
 	/**
@@ -21,8 +21,8 @@ public class Player  {
 	 * @param name of the player
 	 * @param value of the player 
 	 */
-	public Player(String name, Integer value) {
-		this.name = name;
+	public Player(Integer dni, Integer value) {
+		this.dni = dni;
 		this.value = value;
 	}
 	
@@ -30,11 +30,11 @@ public class Player  {
 	}
 	/* Getters and Setters */
 
-	public String getName() {
-		return ( name != null ) ? name : "";
+	public Integer getDni() {
+		return ( dni != null ) ? dni : 0;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setDni(Integer dni) {
+		this.dni = dni;
 	}
 	public Integer getValue() {
 		return value;
@@ -45,7 +45,7 @@ public class Player  {
 	
 	@Override
 	public String toString(){
-		return "Name: "+getName()+", Value:"+value;
+		return "Dni: "+getDni()+", Value:"+value;
 	}
 	 
 }

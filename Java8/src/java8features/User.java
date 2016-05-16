@@ -13,7 +13,7 @@ package java8features;
 public class User {
 
 	/* Each User has a name and an age */
-	private String name;
+	private Integer dni;
 	private Integer age;
 
 	/**
@@ -23,8 +23,8 @@ public class User {
 	 * @param age
 	 *            of the user
 	 */
-	public User(String name, Integer age) {
-		this.name = name;
+	public User(Integer dni, Integer age) {
+		this.dni = dni;
 		this.age = age;
 	}
 	
@@ -33,14 +33,12 @@ public class User {
 
 	/* Getters and Setters */
 
-	public String getName() {
-		return ( name != null ) ? name : "";
+	public Integer getDni() {
+		return ( dni != null ) ? dni : 0;
 	}
-
-	public void setName(String name) {
-		this.name = name;
+	public void setDni(Integer dni) {
+		this.dni = dni;
 	}
-
 	public Integer getAge() {
 		return age;
 	}
@@ -51,7 +49,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "Name: " + getName() + ", Age:" + age;
+		return "Dni: " + getDni() + ", Age:" + age;
 	}
 
 }
